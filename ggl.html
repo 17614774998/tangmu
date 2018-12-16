@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #div1{
+            position: relative;
+        }
+        #div2{
+            background-color: transparent;
+            border: transparent;
+            width: 50%;
+            height: 30%;
+            opacity: 0.5;
+            position:absolute;
+            top:18%;
+            left: 25%;
+        }
+        #div3{
+            background-color: transparent;
+            border: transparent;
+            width: 33%;
+            height: 20%;
+            opacity: 0.5;
+            position:absolute;
+            top:65%;
+            left: 32%;
+        }
+        #div4{
+            background-color: transparent;
+            border: transparent;
+            width: 10%;
+            height: 5%;
+            opacity: 0.5;
+            position:absolute;
+            top:90%;
+            left: 37%;
+        }
+        #div5{
+            background-color: transparent;
+            border: transparent;
+            width: 10%;
+            height: 5%;
+            opacity: 0.5;
+            position:absolute;
+            top:90%;
+            left: 51%;
+        }
+        #div6{
+            background-color: transparent;
+            border: transparent;
+            width: 10%;
+            height: 10%;
+            opacity: 0.5;
+            position:absolute;
+            top:78%;
+            left: 67%;
+        }
+        #b1{
+            background-color: transparent;
+            background-image:url("tom/images/Button/cymbal.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: transparent;
+            width: 15%;
+            height: 9%;
+            position:absolute;
+            top:60%;
+            left:5%;
+        }
+        #b2{
+            background-color: transparent;
+            border: transparent;
+            background-image:url("tom/images/Button/drink.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 15%;
+            height: 9%;
+            position:absolute;
+            top:70%;
+            left:5%;
+        }
+        #b3{
+            background-color: transparent;
+            border: transparent;
+            background-image:url("tom/images/Button/eat.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 15%;
+            height: 9%;
+            position:absolute;
+            top:80%;
+            left:5%;
+        }
+        #b4{
+            background-color: transparent;
+            border: transparent;
+            background-image:url("tom/images/Button/fart.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 15%;
+            height: 9%;
+            position:absolute;
+            top:60%;
+            right:5%;
+        }
+        #b5{
+            background-color: transparent;
+            border: transparent;
+            background-image:url("tom/images/Button/pie.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 15%;
+            height: 9%;
+            position:absolute;
+            top:70%;
+            right:5%;
+        }
+        #b6{
+            background-color: transparent;
+            border: transparent;
+            background-image:url("tom/images/Button/scratch.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 15%;
+            height: 9%;
+            position:absolute;
+            top:80%;
+            right:5%;
+        }
+    </style>
+    <script type="text/javascript">
+        function disabled(){
+            document.getElementById("div2").disabled=true;
+            document.getElementById("div3").disabled=true;
+            document.getElementById("div4").disabled=true;
+            document.getElementById("div5").disabled=true;
+            document.getElementById("div6").disabled=true;
+            document.getElementById("b1").disabled=true;
+            document.getElementById("b2").disabled=true;
+            document.getElementById("b3").disabled=true;
+            document.getElementById("b4").disabled=true;
+            document.getElementById("b5").disabled=true;
+            document.getElementById("b6").disabled=true;
+        }
+        function notdisabled(){
+            document.getElementById("div2").disabled=false;
+            document.getElementById("div3").disabled=false;
+            document.getElementById("div4").disabled=false;
+            document.getElementById("div5").disabled=false;
+            document.getElementById("div6").disabled=false;
+            document.getElementById("b1").disabled=false;
+            document.getElementById("b2").disabled=false;
+            document.getElementById("b3").disabled=false;
+            document.getElementById("b4").disabled=false;
+            document.getElementById("b5").disabled=false;
+            document.getElementById("b6").disabled=false;
+        }
+        function left1(){
+            disabled();
+            //加载音频文件
+            setTimeout(function() {
+                document.getElementById("audio").innerHTML = "<audio src='tom/audio/cymbal.wav' autoplay></audio>"
+            },600);
+            //加载图片
+            //循环变量
+            var j=0;
+            var timer=setInterval(function(){
+                document.getElementById("tom").src="tom/images/Cymbal/cymbal_"+j+".jpg";
+                j++;
+                if(j>12){
+                    notdisabled();
+                    clearInterval(timer);
+                }
+            },100)
+        }
+        function left2() {
+            disabled();
+            //加载音频文件
+            setTimeout(function () {
+                document.getElementById("audio").innerHTML = "<audio src='tom/audio/drink_1.wav' autoplay></audio>"
+            }, 1500);
+            setTimeout(function () {
+                document.getElementById("audio").innerHTML = "<audio src='tom/audio/drink_2.wav' autoplay></audio>"
+            }, 4500);
+            //加载图片
+            //循环变量
+            var j = 0;
+            var timer = setInterval(function () {
+                document.getElementById("tom").src = "tom/images/Drink/drink_" + j + ".jpg";
+                j++;
+                if (j > 80) {
+                    notdisabled();
+                    clearInterval(timer);
+                }
+            }, 100);
+        }
+
+        function right1() {
+                disabled();
+                //加载音频文件
+                setTimeout(function () {
+                    document.getElementById("audio").innerHTML = "<audio src='tom/audio/fart.wav' autoplay></audio>"
+                }, 600);
+                //加载图片
+                //循环变量
+                var j = 0;
+                var timer = setInterval(function () {
+                    document.getElementById("tom").src = "tom/images/Fart/fart_" + j + ".jpg";
+                    j++;
+                    if (j > 27) {
+                        notdisabled();
+                        clearInterval(timer);
+                    }
+                }, 100);
+        }
+        function right2() {
+            disabled();
+            //加载音频文件
+            setTimeout(function () {
+                document.getElementById("audio").innerHTML = "<audio src='tom/audio/pie.wav' autoplay></audio>"
+            }, 1200);
+            //加载图片
+            //循环变量
+            var j = 0;
+            var timer = setInterval(function () {
+                document.getElementById("tom").src = "tom/images/Pie/pie_" + j + ".jpg";
+                j++;
+                if (j > 23) {
+                    notdisabled();
+                    clearInterval(timer);
+                }
+            }, 100);
+        }
+        function right3() {
+            disabled();
+            //加载音频文件
+            setTimeout(function () {
+                document.getElementById("audio").innerHTML = "<audio src='tom/audio/scratch.wav' autoplay></audio>"
+            }, 2400);
+            //加载图片
+            //循环变量
+            var j = 0;
+            var timer = setInterval(function () {
+                document.getElementById("tom").src = "tom/images/Scratch/scratch_" + j + ".jpg";
+                j++;
+                if (j > 55) {
+                    notdisabled();
+                    clearInterval(timer);
+                }
+            }, 100);
+        }
+        function wei() {
+            disabled();
+            //加载音频文件
+            setTimeout(function () {
+                document.getElementById("audio").innerHTML = "<audio src='tom/audio/stomach.wav' autoplay></audio>"
+            }, 600);
+            //加载图片
+            //循环变量
+            var j = 0;
+            var timer = setInterval(function () {
+                document.getElementById("tom").src = "tom/images/Stomach/stomach_" + j + ".jpg";
+                j++;
+                if (j > 33) {
+                    notdisabled();
+                    clearInterval(timer);
+                }
+            }, 100);
+        }
+        function foot1() {
+            disabled();
+            //加载音频文件
+            setTimeout(function () {
+                document.getElementById("audio").innerHTML = "<audio src='tom/audio/footLeft.wav' autoplay></audio>"
+            }, 600);
+            //加载图片
+            //循环变量
+            var j = 0;
+            var timer = setInterval(function () {
+                document.getElementById("tom").src = "tom/images/FootLeft/footLeft_" + j + ".jpg";
+                j++;
+                if (j > 29) {
+                    notdisabled();
+                    clearInterval(timer);
+                }
+            }, 100);
+        }
+        function foot2() {
+            disabled();
+            //加载音频文件
+            setTimeout(function () {
+                document.getElementById("audio").innerHTML = "<audio src='tom/audio/footRight.wav' autoplay></audio>"
+            }, 600);
+            //加载图片
+            //循环变量
+            var j = 0;
+            var timer = setInterval(function () {
+                document.getElementById("tom").src = "tom/images/FootRight/footRight_" + j + ".jpg";
+                j++;
+                if (j > 29) {
+                    notdisabled();
+                    clearInterval(timer);
+                }
+            }, 100);
+        }
+        function weiba() {
+            disabled();
+            //加载音频文件
+            setTimeout(function () {
+                document.getElementById("audio").innerHTML = "<audio src='tom/audio/angry.wav' autoplay></audio>"
+            }, 600);
+            //加载图片
+            //循环变量
+            var j = 0;
+            var timer = setInterval(function () {
+                document.getElementById("tom").src = "tom/images/Angry/angry_" + j + ".jpg";
+                j++;
+                if (j > 25) {
+                    notdisabled();
+                    clearInterval(timer);
+                }
+            }, 100);
+        }
+        function left3() {
+            disabled();
+            //加载音频文件
+            setTimeout(function () {
+                document.getElementById("audio").innerHTML = "<audio src='tom/audio/eat.wav' autoplay></audio>"
+            }, 600);
+            //加载图片
+            //循环变量
+            var j = 0;
+            var timer = setInterval(function () {
+                document.getElementById("tom").src = "tom/images/Eat/eat_" + j + ".jpg";
+                j++;
+                if (j > 39) {
+                    notdisabled();
+                    clearInterval(timer);
+                }
+            }, 100);
+        }
+        function hand() {
+            disabled();
+            //加载音频文件
+            setTimeout(function () {
+                document.getElementById("audio").innerHTML = "<audio src='tom/audio/knockout_1.wav' autoplay></audio>"
+            }, 600);
+            setTimeout(function () {
+                document.getElementById("audio").innerHTML = "<audio src='tom/audio/knockout_2.wav' autoplay></audio>"
+            }, 2000);
+            //加载图片
+            //循环变量
+            var j = 0;
+            var timer = setInterval(function () {
+                document.getElementById("tom").src = "tom/images/Knockout/knockout_" + j + ".jpg";
+                j++;
+                if (j > 80) {
+                    notdisabled();
+                    clearInterval(timer);
+                }
+            }, 100);
+        }
+
+
+    </script>
+
+</head>
+<body>
+<div id="audio"></div>
+<div id="div1">
+    <img src="tom/images/angry/angry_0.jpg"
+         width="100%" id="tom" alt="12">
+    <button id="div2" onclick="hand()"></button>
+    <button id="div3" onclick="wei()"></button>
+    <button id="div4" onclick="foot1()"></button>
+    <button id="div5" onclick="foot2()"></button>
+    <button id="div6" onclick="weiba()"></button>
+    <button id="b1" onclick="left1()"></button>
+    <button id="b2" onclick="left2()"></button>
+    <button id="b3" onclick="left3()"></button>
+    <button id="b4" onclick="right1()"></button>
+    <button id="b5" onclick="right2()"></button>
+    <button id="b6" onclick="right3()"></button>
+</div>
+</body>
+</html>
